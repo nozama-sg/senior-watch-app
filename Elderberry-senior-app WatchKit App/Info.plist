@@ -25,7 +25,30 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>This app requires to access your health data</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>This app requires to access your health data</string>
 	<key>WKWatchKitApp</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>yourdomain.com</key>
+			<dict>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+	<key>com.apple.developer.healthkit.background-delivery</key>
 	<true/>
 </dict>
 </plist>
